@@ -5,20 +5,6 @@ public class BinarySearch {
     // first case is that the input array is sorted in ascending order
     // second case is that the input array is sorted in descending order
 
-
-
-
-    public static void main(String[] args) {
-        int[] arr = {-18,-12,-4, 0,2,3,4};
-        int[] arr2 = {5,4,3,2,1,0};
-//        int ans = binarySearch(arr,15);
-        int ans2 = OrderAgnosticBinarySearch.orderAgnostic(arr2,4);
-        System.out.println(ans2);
-    }
-
-
-
-
     // returns the index
     // else returns -1 if not found
     static int binarySearch(int[] arr, int target)

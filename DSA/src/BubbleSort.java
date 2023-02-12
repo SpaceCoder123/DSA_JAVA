@@ -24,5 +24,5 @@ public class BubbleSort {
     }
 
     // O(n^2) time complexity and therefore is stable but time consuming when compared to other sorting algorithms
-    // as the length of the array increases 
+    // as the length of the array increases
 }
