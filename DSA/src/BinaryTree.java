@@ -53,6 +53,14 @@ public class BinaryTree {
         System.out.print(root.val);
 
     }
+    protected static int  heightOfBinaryTree(Node Root)
+    {
+        if(Root == null) return 0;
+        int lh = heightOfBinaryTree(Root.Left);
+        int rh = heightOfBinaryTree(Root.Left);
+        return 1+ Math.max(lh,rh);
+
+    }
 
 
     public static void main(String[] args)
@@ -67,6 +75,9 @@ public class BinaryTree {
 
         printTreePostOrder(root);
         System.out.println("--------------------------------- Post order -------------------------");
+
+        System.out.println("---------------------------------Height of the binary tree");
+        System.out.println(heightOfBinaryTree(root));
     }
 
 }

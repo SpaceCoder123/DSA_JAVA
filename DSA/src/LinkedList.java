@@ -116,6 +116,26 @@ public class LinkedList {
         size++;
 
     }
+    private static int val;
+    protected void removeDuplicates()
+    {
+        Node head = get(0);
+        if(head == null)
+        {
+            return;
+        }
+        Node Temp = head;
+        while(Temp.next != null)
+        {
+            if(Temp.value == Temp.next.value)
+            {
+                Temp.next = Temp.next.next;
+            }
+            else{
+                Temp = Temp.next;
+            }
+        }
+    }
     private class Node{
         private int value;
         private Node next;
@@ -127,6 +147,19 @@ public class LinkedList {
             this.next = next;
         }
 
+    }
+
+    public static void main(String[] args)
+    {
+        LinkedList LL = new LinkedList();
+        LL.insertFirst(3);
+        LL.insertFirst(3);
+        LL.insertFirst(3);
+        LL.insertFirst(4);
+        LL.insertFirst(5);
+        LL.insertFirst(5);
+        LL.removeDuplicates();
+        LL.displayLL();
     }
 
 }
